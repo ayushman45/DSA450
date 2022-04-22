@@ -1,8 +1,9 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q10 {
+public class Q11 {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -11,19 +12,19 @@ public class Q10 {
 		int size = sc.nextInt();
 		Array A = new Array(size);
 		int [] arr=A.array;
-		int k=0,jump=0;
-		for(int i=0;i<arr.length;i+=k) {
-			if(arr[i]==0) {
-				System.out.println("We cant get to end of array");
-				break;
-			}
-			else {
-				k=arr[i];
-				jump++;
+		
+		Arrays.sort(arr);
+		
+		int index[]=new int[arr.length];
+		
+		for(int i=0;i<arr.length;i++) {
+			index[arr[i]-1]=1;
+		}
+		for(int i=0;i<index.length;i++) {
+			if(index[i]==0) {
+				System.out.println(i+1+" is missing number.");
 			}
 		}
-		
-		System.out.println("Total Jumps : "+jump);
 	}
 
 }
