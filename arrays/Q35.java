@@ -13,12 +13,13 @@ public class Q35 {
 		Array A = new Array(size);
 		int[] arr = A.array;
 		Arrays.sort(arr);
-		int median=0;
-		if(arr.length%2!=0){
-			median=arr[arr.length/2];
+		double median=0;
+		int n=size/2;
+		if(size%2==0){
+			median=(arr[n-1]+arr[n])/2.0;
 		}
 		else {
-			median=arr[arr.length/1]+arr[arr.length/2 -1];
+			median=arr[n];
 		}
 		
 		System.out.println("Median element is "+median);
