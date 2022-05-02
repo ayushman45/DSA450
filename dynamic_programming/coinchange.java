@@ -2,7 +2,7 @@ package dynamic_programming;
 
 import java.util.Scanner;
 
-public class Q01 {
+public class coinchange {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -18,12 +18,12 @@ public class Q01 {
 			a[i]=sc.nextInt();
 		}
 		int[][]dp=new int[W+1][n+1];
-		int ans=coinchange(W,n,a,dp);
+		int ans=coinchng(W,n,a,dp);
 		System.out.println(ans);
 		
 	}
 
-	private static int coinchange(int W, int n, int[] a, int[][] dp) {
+	private static int coinchng(int W, int n, int[] a, int[][] dp) {
 		// TODO Auto-generated method stub
 		for(int i=0;i<=n;i++) {
 			dp[0][i]=1;

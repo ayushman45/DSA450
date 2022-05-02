@@ -2,7 +2,7 @@ package dynamic_programming;
 
 import java.util.Scanner;
 
-public class Q02 {
+public class knapsack {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
