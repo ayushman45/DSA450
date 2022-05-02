@@ -1,0 +1,39 @@
+package linkedlist;
+import java.util.*;
+public class Q04 {
+    static Scanner sc=new Scanner (System.in);
+    public static void main(String[] args) {
+        Node head;
+		int counter=1;
+		Node p=new Node();
+		p.next=null;
+		Node q;
+		head=p;
+		System.out.println("Enter 1 to add node : ");
+		counter=sc.nextInt();
+		while(counter==1) {
+			q=new Node();
+			q.next=null;
+			p.next=q;
+			p=q;
+			System.out.println("Enter 1 to add node : ");
+			counter=sc.nextInt();
+		}
+        System.out.println("Enter 1 if you want a loop :");
+        int loop=sc.nextInt();
+        if(loop==1)p.next=head;
+        detect(head);
+        head.traverse();
+        
+    }
+    static void detect(Node head){
+        Node p=head;
+        while(p!=null){
+            if(p.next==head){
+                p.next=null;
+            }
+            p=p.next;
+        }
+        return ;
+    }
+}
