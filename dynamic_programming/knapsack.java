@@ -27,9 +27,9 @@ public class knapsack {
 	}
 
 	private static int knapsnack(int W, int n, int[] job, int[] val) {
-		// TODO Auto-generated method stub
+	
 		int[][] dp = new int[n + 1][W + 1];
-
+		
 		for (int i = 0; i <= n; i++) {
 			for (int j = 0; j <= W; j++) {
 				if (i == 0 || j == 0)
